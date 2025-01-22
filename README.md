@@ -1,16 +1,20 @@
-# prelura_test_app
+# Mobile Test Assessment
 
-A new Flutter project.
+A mobile application test project for <b>Prelura</b>
+Developer: Chukwuoma Gideon Chimemerie
 
-## Getting Started
+📫 You can reach me here: [Mail](mailto:gideon.dart@gmail.com).
 
-This project is a starting point for a Flutter application.
+## Framework Info
 
-A few resources to get you started if this is your first Flutter project:
+Built with [Flutter](https://flutter.dev)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `Flutter 3.27.3 • channel stable`
+- `Engine • revision 83bacfc525`
+- `Tools • Dart 3.6.0 • DevTools 2.40.2`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to download the APK
+
+- Click on `Prelura Mobile Test App` under [Releases](https://github.com/egideons/prelura_test_app/releases)
+- You will see `app-release.apk` under Assets
+- Click on it to download the app
