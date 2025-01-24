@@ -12,6 +12,7 @@ dependencies:
   get:
   google_fonts:
   iconsax:
+  text_typewriter:
 
 dev_dependencies:
   flutter_test:

@@ -22,8 +22,17 @@ class WardrobeController extends GetxController {
     buildInfo();
   }
 
+//!================ Keys ================\\
+  final _formKey = GlobalKey<FormState>();
+
 //!================ Controllers ================\\
   var scrollController = ScrollController();
+  var sortCodeEC = TextEditingController();
+  var acctNumberEC = TextEditingController();
+
+//!================ Focus Nodes ================\\
+  var sortCodeFN = FocusNode();
+  var acctNumberFN = FocusNode();
 
 //!================ Variables ================\\
   var userProfile = UserModel(
@@ -72,6 +81,7 @@ class WardrobeController extends GetxController {
     "The North Pole",
   ];
   var profileInfo = [].obs;
+  var listOfTexts = ["wear ", "need ", "want "].obs;
 
   buildInfo() {
     profileInfo.value = [
@@ -96,6 +106,7 @@ class WardrobeController extends GetxController {
 
 //!================ Booleans ================\\
   var isScrollToTopBtnVisible = false.obs;
+  var isChecked = false.obs;
 
 //!================ Functions =================//
 
@@ -122,4 +133,9 @@ class WardrobeController extends GetxController {
 
   //================ On Refresh =================//
   Future<void> onRefresh() async {}
+
+  //================ Form =================//
+  onFieldSubmitted(value) {
+    acctNumberFN.requestFocus();
+  }
 }

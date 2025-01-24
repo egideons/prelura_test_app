@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 const kDefaultPadding = 20.0;
 const kHalfDefaultPadding = 10.0;
 
+void dismissKeyboard() {
+  FocusManager.instance.primaryFocus?.unfocus();
+}
+
 extension SizedBoxExtension on int {
   Widget get toHeight {
     return SizedBox(
