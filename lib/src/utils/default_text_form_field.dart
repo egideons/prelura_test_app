@@ -13,7 +13,7 @@ defaultTextFormField(
   TextCapitalization? textCapitalization,
   required String hintText,
   EdgeInsetsGeometry? contentPadding,
-  String? errorText,
+  // String? errorText,
   Widget? prefixIcon,
   Widget? suffixIcon,
 }) {
@@ -36,15 +36,15 @@ defaultTextFormField(
       hintText: hintText,
       prefixIcon: prefixIcon,
       suffixIcon: suffixIcon,
-      errorText: errorText ?? "",
-      // focusedBorder: OutlineInputBorder(
-      //   borderRadius: BorderRadius.circular(8),
-      //   borderSide: BorderSide(width: 1, color: colorScheme.primary),
-      // ),
-      // focusedErrorBorder: OutlineInputBorder(
-      //   borderRadius: BorderRadius.circular(8),
-      //   borderSide: BorderSide(width: 1, color: colorScheme.error),
-      // ),
+      // errorText: errorText ?? "",
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(width: 1, color: colorScheme.primary),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(width: 1, color: colorScheme.error),
+      ),
       contentPadding: contentPadding ?? const EdgeInsets.all(10),
       hintStyle: defaultTextStyle(
         color: kTextGreyColor,
@@ -53,11 +53,11 @@ defaultTextFormField(
       ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(width: 1, color: kGreyColor),
+        borderSide: BorderSide(width: 1, color: Colors.grey.shade600),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(width: 1, color: kGreyColor),
+        borderSide: BorderSide(width: 1, color: Colors.grey.shade600),
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),

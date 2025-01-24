@@ -23,16 +23,9 @@ class WardrobeController extends GetxController {
   }
 
 //!================ Keys ================\\
-  final _formKey = GlobalKey<FormState>();
 
 //!================ Controllers ================\\
   var scrollController = ScrollController();
-  var sortCodeEC = TextEditingController();
-  var acctNumberEC = TextEditingController();
-
-//!================ Focus Nodes ================\\
-  var sortCodeFN = FocusNode();
-  var acctNumberFN = FocusNode();
 
 //!================ Variables ================\\
   var userProfile = UserModel(
@@ -106,7 +99,6 @@ class WardrobeController extends GetxController {
 
 //!================ Booleans ================\\
   var isScrollToTopBtnVisible = false.obs;
-  var isChecked = false.obs;
 
 //!================ Functions =================//
 
@@ -133,9 +125,4 @@ class WardrobeController extends GetxController {
 
   //================ On Refresh =================//
   Future<void> onRefresh() async {}
-
-  //================ Form =================//
-  onFieldSubmitted(value) {
-    acctNumberFN.requestFocus();
-  }
 }
