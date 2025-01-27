@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:prelura_test_app/app/wardrobe/modules/my_app_bar.dart';
 import 'package:prelura_test_app/src/constants/consts.dart';
 import 'package:prelura_test_app/src/controller/add_bank_account_controller.dart';
 import 'package:prelura_test_app/src/utils/default_text_form_field.dart';
+import 'package:prelura_test_app/src/utils/my_app_bar.dart';
 import 'package:prelura_test_app/src/utils/my_elevated_button.dart';
 import 'package:prelura_test_app/src/utils/sort_code_text_input_formatter.dart';
 import 'package:prelura_test_app/theme/colors.dart';

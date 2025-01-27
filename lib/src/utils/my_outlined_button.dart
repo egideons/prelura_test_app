@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:prelura_test_app/src/constants/consts.dart';
 
-class MyElevatedButton extends StatelessWidget {
+class MyOutlinedButton extends StatelessWidget {
   final String title;
   final Function()? onPressed;
   final bool isLoading;
@@ -18,11 +18,12 @@ class MyElevatedButton extends StatelessWidget {
       buttonColor,
       indicatorColor,
       textColor,
-      buttonIconColor;
+      buttonIconColor,
+      borderSideColor;
   final Widget? rowIconWidget;
   final FontWeight? fontWeight;
 
-  const MyElevatedButton({
+  const MyOutlinedButton({
     super.key,
     required this.title,
     required this.onPressed,
@@ -37,6 +38,7 @@ class MyElevatedButton extends StatelessWidget {
     this.buttonIconSize,
     this.isSwitched,
     this.buttonColor,
+    this.borderSideColor,
     this.borderRadius,
     this.mainAxisAlignment,
     this.indicatorColor,
@@ -51,21 +53,24 @@ class MyElevatedButton extends StatelessWidget {
     var media = MediaQuery.sizeOf(context);
     var colorScheme = Theme.of(context).colorScheme;
 
-    return ElevatedButton(
+    return OutlinedButton(
       onPressed: disable
           ? null
           : isLoading
               ? null
               : onPressed,
       onLongPress: null,
-      style: ElevatedButton.styleFrom(
+      style: OutlinedButton.styleFrom(
         disabledBackgroundColor:
             // ignore: deprecated_member_use
-            disabledBackgroundColor ?? colorScheme.primary.withOpacity(.6),
-        backgroundColor: buttonColor ?? colorScheme.primary,
+            disabledBackgroundColor ?? colorScheme.surface.withOpacity(.6),
+        backgroundColor: buttonColor ?? colorScheme.surface,
         elevation: buttonElevation ?? 0,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 5)),
+          borderRadius: BorderRadius.circular(borderRadius ?? 5),
+        ),
+        side:
+            BorderSide(width: 1, color: borderSideColor ?? colorScheme.primary),
         minimumSize: Size(media.width, 40),
       ),
       child: isLoading
@@ -84,12 +89,12 @@ class MyElevatedButton extends StatelessWidget {
                             ),
                         mainAxisAlignment == null
                             ? const SizedBox()
-                            : 4.toWidth,
+                            : 10.toWidth,
                         Text(
                           title,
                           textAlign: TextAlign.center,
                           style: defaultTextStyle(
-                            color: textColor ?? Colors.white,
+                            color: textColor ?? colorScheme.inverseSurface,
                             fontSize: fontSize ?? 14.0,
                             fontFamily: fontFamily,
                             fontWeight: fontWeight ?? FontWeight.w600,
@@ -105,7 +110,7 @@ class MyElevatedButton extends StatelessWidget {
                           title,
                           textAlign: TextAlign.center,
                           style: defaultTextStyle(
-                            color: textColor ?? Colors.white,
+                            color: textColor ?? colorScheme.inverseSurface,
                             fontSize: fontSize ?? 14.0,
                             fontFamily: fontFamily,
                             fontWeight: fontWeight ?? FontWeight.w600,
@@ -113,7 +118,7 @@ class MyElevatedButton extends StatelessWidget {
                         ),
                         mainAxisAlignment == null
                             ? const SizedBox()
-                            : 4.toWidth,
+                            : 10.toWidth,
                         rowIconWidget ??
                             Icon(
                               buttonIcon,
@@ -126,7 +131,7 @@ class MyElevatedButton extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: defaultTextStyle(
-                    color: textColor ?? Colors.white,
+                    color: textColor ?? colorScheme.inverseSurface,
                     fontSize: fontSize ?? 14.0,
                     fontFamily: fontFamily,
                     fontWeight: fontWeight ?? FontWeight.w600,

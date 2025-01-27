@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       defaultTransition: Transition.native,
       debugShowCheckedModeBanner: false,
       locale: Get.deviceLocale,
-      initialRoute: Routes.addPaymentCard,
+      initialRoute: Routes.inviteFriend,
       getPages: Routes.getPages,
       darkTheme: androidDarkTheme,
       themeMode: ThemeMode.dark,

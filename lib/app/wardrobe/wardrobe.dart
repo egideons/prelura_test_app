@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:prelura_test_app/app/wardrobe/modules/my_app_bar.dart';
+import 'package:prelura_test_app/app/wardrobe/modules/brand_header_section.dart';
+import 'package:prelura_test_app/app/wardrobe/modules/brands_from_seller_section.dart';
+import 'package:prelura_test_app/app/wardrobe/modules/build_products_grid.dart';
 import 'package:prelura_test_app/src/constants/consts.dart';
 import 'package:prelura_test_app/src/controller/wardrobe_controller.dart';
+import 'package:prelura_test_app/src/utils/my_app_bar.dart';
+import 'package:prelura_test_app/theme/colors.dart';
 
 class Wardrobe extends GetView<WardrobeController> {
   const Wardrobe({super.key});
@@ -32,21 +36,20 @@ class Wardrobe extends GetView<WardrobeController> {
               controller: controller.scrollController,
               physics: const BouncingScrollPhysics(),
               slivers: [
-                // brandHeaderSection(colorScheme, controller),
-                // brandsFromSellerSection(colorScheme, controller),
-                // buildProductsGrid(colorScheme, controller),
-                // SliverToBoxAdapter(
-                //     child:
-                //    Container(
-                //     margin: const EdgeInsets.all(20),
-                //     height: 10,
-                //     width: 10,
-                //     decoration: BoxDecoration(
-                //       shape: BoxShape.circle,
-                //       color: kGreyColor,
-                //     ),
-                //   ),
-                // ),
+                brandHeaderSection(colorScheme, controller),
+                brandsFromSellerSection(colorScheme, controller),
+                buildProductsGrid(colorScheme, controller),
+                SliverToBoxAdapter(
+                  child: Container(
+                    margin: const EdgeInsets.all(20),
+                    height: 10,
+                    width: 10,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: kGreyColor,
+                    ),
+                  ),
+                ),
 
                 //    Center(
                 //   child: RichText(

@@ -15,6 +15,7 @@ dependencies:
   text_typewriter:
   flutter_svg:
   intl:
+  flutter_animate:
 
 dev_dependencies:
   flutter_test:

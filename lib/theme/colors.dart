@@ -10,5 +10,6 @@ Color kGreyColor = Colors.grey.shade800;
 Color kGreyIconColor = const Color(0xFF6C6C6C);
 Color kTextGreyColor = const Color(0xFF6C6C6C);
 Color kTransparentColor = const Color(0x00000000);
+Color kFaceBookColor = const Color(0xFF2050b0);
 Color kDivideColor = Colors.grey.shade600;
 Color kErrorColor = Colors.red;
