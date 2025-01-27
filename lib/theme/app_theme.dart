@@ -8,6 +8,16 @@ ThemeData androidDarkTheme = ThemeData(
   useMaterial3: true,
   applyElevationOverlayColor: false,
   textTheme: GoogleFonts.interTextTheme(),
+  expansionTileTheme: ExpansionTileThemeData(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5),
+      side: BorderSide(width: 0.8, color: kDivideColor),
+    ),
+    collapsedShape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5),
+      side: BorderSide(width: 0.8, color: kDivideColor),
+    ),
+  ),
   colorScheme: ColorScheme.dark(
     surface: kDarkBackgroundSolidColor,
     primary: kPrimaryColor,

@@ -60,11 +60,12 @@ class MyElevatedButton extends StatelessWidget {
       onLongPress: null,
       style: ElevatedButton.styleFrom(
         disabledBackgroundColor:
+            // ignore: deprecated_member_use
             disabledBackgroundColor ?? colorScheme.primary.withOpacity(.6),
         backgroundColor: buttonColor ?? colorScheme.primary,
         elevation: buttonElevation ?? 0,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 10)),
+            borderRadius: BorderRadius.circular(borderRadius ?? 5)),
         minimumSize: Size(media.width, 40),
       ),
       child: isLoading

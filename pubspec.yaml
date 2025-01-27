@@ -13,6 +13,8 @@ dependencies:
   google_fonts:
   iconsax:
   text_typewriter:
+  flutter_svg:
+  intl:
 
 dev_dependencies:
   flutter_test:

@@ -13,7 +13,7 @@ class AddBankAccountController extends GetxController {
   }
 
 //!================ Keys ================\\
-  final _formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
 
 //!================ Controllers ================\\
   var scrollController = ScrollController();
@@ -42,8 +42,8 @@ class AddBankAccountController extends GetxController {
   }
 
   Future<void> save() async {
-    if (_formKey.currentState!.validate()) {
-      _formKey.currentState!.save();
+    if (formKey.currentState!.validate()) {
+      formKey.currentState!.save();
 
       isLoading.value = true;
 
