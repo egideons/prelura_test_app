@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:fast_contacts/fast_contacts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -13,40 +12,35 @@ class InviteFriendController extends GetxController {
     return Get.find<InviteFriendController>();
   }
 
+  @override
+  void onClose() {
+    scrollController.dispose();
+    super.onClose();
+  }
+
 //!================ Controllers ================\\
   var scrollController = ScrollController();
 
-//!================ Focus Nodes ================\\
-
 //!================ Variables ================\\
   var profileLink = "Prelura.com/sdjvhsdElWhsa064".obs;
-  var selectedContacts = <int>[].obs;
-  var numOfContacts = 20.obs;
-  var contactName = "Ade".obs;
-  void toggleSelection(int index) {
-    if (selectedContacts.contains(index)) {
-      selectedContacts.remove(index);
-      log("Deselected: $index");
-    } else {
-      selectedContacts.add(index);
-      log("Selected: $index");
-    }
+  var selectedContacts = <String>[].obs;
+  var displayedContacts = <Contact>[].obs;
+  var contacts = <Contact>[].obs;
 
-    log("Updated List: $selectedContacts");
-  }
+//!================ Integers ================\\
+  final int pageSize = 20;
+  int currentPage = 0;
 
 //!================ Booleans ================\\
   var isLoading = false.obs;
-  var shareProfileLinkButtonIsVisible = true.obs;
+  var isPaginating = false.obs;
+  var hasMoreContacts = false.obs;
+  var isLoadingMore = false.obs;
 
 //!================ Functions =================//
 
-  Future<void> inviteContact() async {
+  goToListContacts() {
     Get.toNamed(Routes.listOfContacts);
-  }
-
-  Future<void> inviteSelectedContacts() async {
-    Get.back();
   }
 
   Future<void> shareProfileLink() async {

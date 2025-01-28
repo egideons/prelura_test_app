@@ -16,6 +16,8 @@ dependencies:
   flutter_svg:
   intl:
   flutter_animate:
+  fast_contacts: ^4.0.0
+  permission_handler:
 
 dev_dependencies:
   flutter_test:

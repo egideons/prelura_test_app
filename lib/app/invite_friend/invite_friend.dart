@@ -30,7 +30,7 @@ class InviteFriend extends GetView<InviteFriendController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 InkWell(
-                  onTap: controller.inviteContact,
+                  onTap: controller.goToListContacts,
                   child: Container(
                     width: size.width - 60,
                     padding: EdgeInsets.all(20),
